@@ -1,6 +1,6 @@
 def calcular(valor):
-    comissao = valor * 0.09
-    sal = 200 + comissao
+    extra = valor * 0.09
+    sal = 200 + extra
     return sal
 
 
@@ -12,6 +12,14 @@ def catalogar(lista):
     return listagem
 
 
+def maiores_salario(lista_1):
+    contador = 0
+    for n in lista_1:
+        if n >= 10:
+            contador = contador + 1
+    return contador
+
+
 lista_resultados = []
 arg = True
 while arg:
@@ -21,15 +29,6 @@ while arg:
         lista_resultados.append(salario)
     else:
         arg = False
-
-
-def maiores_salario(lista_1):
-    contador = 0
-    for n in lista_1:
-        if n >= 10:
-            contador = contador + 1
-    return contador
-
 
 x = catalogar(lista_resultados)
 print(f'temos {x.count(2)} com salario entre R$200 - R$299'
