@@ -1,12 +1,7 @@
-#1-inserir salario. 0 saindo do programa
-#2-calcular abono de 20% sobre o salario
-#3-apresentar salario e abono
-#4-apresentar resumo
-
 def calcular(lista):
     lista_calculada = []
     for salario in lista:
-        abono = salario*0.20
+        abono = salario * 0.20
         if abono < 100:
             abono = float(100)
             tupla_valores = (salario, abono)
@@ -48,6 +43,7 @@ def formatar_dados(lista, abono, minimo):
           f'\nValor mínimo pago a {minimo} colaboradores'
           f'\nMaior valor de abono pago: R${maior_abono[0][1]}')
 
+
 arg = True
 lista_sal = []
 while arg:
@@ -56,10 +52,7 @@ while arg:
         lista_sal.append(sal)
     else:
         valores = calcular(lista_sal)
-        print(valores)
         total_abono = calcular_abono(valores)
         total_minimo = calcular_minimo(valores)
         formatar_dados(valores, total_abono, total_minimo)
         arg = False
-
-
