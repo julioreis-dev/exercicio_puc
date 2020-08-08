@@ -1,8 +1,9 @@
 def apurar_votos(apurados):
-    somatorio = 0
+    soma = 0
     for valor in apurados:
-        somatorio = valor + somatorio
-    return somatorio
+        soma = valor + soma
+    return soma
+
 
 def listar_resultado(apurados1, soma):
     lista_geral = []
@@ -14,14 +15,18 @@ def listar_resultado(apurados1, soma):
         lista_geral.append(tupla_resultado)
     return lista_geral
 
+
 def definir_percental(valor1, total):
     perc = (valor1 * 100) / total
     return perc
 
+
 def resumir(lista_dados):
     lista_sys = ['Windows Server', 'Unix', 'Linux', 'Netware', 'Mac os', 'Outro']
     sistema = lista_sys[lista_dados[2]]
-    return f'\nO sistema Operacional mais votado foi o {sistema}, com {lista_dados[0]} votos, correspondendo a {lista_dados[1]}% dos votos.'
+    return f'\nO sistema Operacional mais votado foi o {sistema}, com {lista_dados[0]} votos, ' \
+           f'correspondendo a {lista_dados[1]}% dos votos.'
+
 
 def mostrar_resultado(tupla_dados, soma):
     print('Sistema operacional   Votos   %\n------------------------------------'
@@ -33,6 +38,7 @@ def mostrar_resultado(tupla_dados, soma):
           f'\nOutro                  {tupla_dados[5][0]} / {tupla_dados[5][1]}%'
           f'\n------------------------------------'
           f'\nTotal                  {soma} votos')
+
 
 arg = True
 lista_1 = []

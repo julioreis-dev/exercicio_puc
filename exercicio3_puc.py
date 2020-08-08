@@ -12,6 +12,7 @@ def apurar(list_soma):
         soma = soma + n
     return soma
 
+
 def analisar(voto, total):
     lista_resultado = []
     index = 0
@@ -21,9 +22,6 @@ def analisar(voto, total):
         resulta_parcial = (percentual, index, n)
         lista_resultado.append(resulta_parcial)
     return lista_resultado
-
-
-
 
 
 def votar():
