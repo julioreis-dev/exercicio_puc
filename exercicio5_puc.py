@@ -46,7 +46,7 @@ def formatar_dados(lista, abono, minimo):
     print(f'\nForam processados {len(lista)} colaboradores'
           f'\nTotal gasto com abonos:R$ {abono}'
           f'\nValor mínimo pago a {minimo} colaboradores'
-          f'\nMaior valor de abono pago: R${maior_abono[0][0]}')
+          f'\nMaior valor de abono pago: R${maior_abono[0][1]}')
 
 arg = True
 lista_sal = []
